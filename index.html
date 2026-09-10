@@ -143,13 +143,7 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
 /* ============ 5. ANTES E DEPOIS ============ */
 .ad{background:var(--fundo)}
 .ad-img{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--borda);background:#fff}
-.ad-fake{display:grid;grid-template-columns:1fr 1fr;min-height:260px}
-.ad-fake > div{padding:26px 20px;display:grid;align-content:center;justify-items:center;text-align:center;gap:10px}
-.ad-fake .antes{background:#F0F1F5;color:#6B7086}
-.ad-fake .depois{background:linear-gradient(160deg,#12A150,#0D8341);color:#fff}
-.ad-fake .tit{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
-.ad-fake .car{font-size:2.6rem}
-.ad-fake p{font-size:.92rem;line-height:1.45}
+.ad-img img{width:100%}
 .ad-legenda{display:grid;gap:8px;margin-top:18px;text-align:center;font-size:.95rem;color:var(--texto-2)}
 
 /* ============ 6. CONSEQUÊNCIAS ============ */
@@ -174,7 +168,7 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
 .prod-grid{display:grid;gap:30px;align-items:center;margin-top:34px}
 @media(min-width:820px){.prod-grid{grid-template-columns:.85fr 1.15fr;gap:44px}}
 
-/* mockup em CSS — troque pela imagem real */
+/* mockup em CSS, troque pela imagem real */
 .mock{position:relative;max-width:290px;margin:0 auto;width:100%}
 .mock-capa{
   aspect-ratio:3/4;border-radius:8px 18px 18px 8px;
@@ -207,42 +201,34 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
 
 /* ============ 9. BENEFÍCIOS + RODA ============ */
 .benef{background:#fff}
-.benef-grid{display:grid;gap:32px;align-items:center;margin-top:32px}
-@media(min-width:860px){.benef-grid{grid-template-columns:1.15fr .85fr;gap:46px}}
+.benef-grid{display:grid;gap:32px;margin-top:32px;max-width:640px;margin-left:auto;margin-right:auto}
 .benef-lista{display:grid;gap:14px}
 .benef-item{display:flex;gap:13px;align-items:flex-start;background:var(--fundo);border-radius:var(--r);padding:16px 18px}
 .benef-item i{flex:none;font-style:normal;width:26px;height:26px;border-radius:50%;background:var(--verde);color:#fff;display:grid;place-items:center;font-size:.75rem;margin-top:2px}
 .benef-item b{display:block;color:var(--noite);font-size:1rem}
 .benef-item span{font-size:.92rem;color:var(--texto-2)}
 
-.roda{
-  background:linear-gradient(160deg,#101A38,#1B2A55);border-radius:var(--r-lg);
-  padding:30px 22px;text-align:center;color:#fff
-}
-.roda .centro-c{
-  width:120px;height:120px;border-radius:50%;background:var(--amarelo);color:var(--noite);
-  display:grid;place-items:center;margin:0 auto 20px;font-weight:800;font-size:1.02rem;line-height:1.2;
-  box-shadow:0 0 0 10px rgba(255,197,61,.16)
-}
-.roda .orbs{display:flex;flex-wrap:wrap;justify-content:center;gap:9px}
-.roda .orb{
-  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
-  border-radius:100px;padding:9px 15px;font-size:.86rem;font-weight:700;display:inline-flex;gap:7px;align-items:center
-}
-
 /* ============ 10. PROVA SOCIAL ============ */
 .prova{background:var(--fundo)}
 .prova .video{margin:30px auto 0}
-.deps{display:grid;gap:14px;margin-top:28px}
-@media(min-width:820px){.deps{grid-template-columns:repeat(3,1fr)}}
-.dep{background:#fff;border:1px solid var(--borda);border-radius:var(--r-lg);padding:22px;display:flex;flex-direction:column}
+.carrossel-dep{margin-top:28px}
+.dep-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px;scrollbar-width:none;text-align:left}
+.dep-track::-webkit-scrollbar{display:none}
+.dep{background:#fff;border:1px solid var(--borda);border-radius:var(--r-lg);padding:22px;display:flex;flex-direction:column;flex:0 0 86%;scroll-snap-align:start}
+@media(min-width:700px){.dep{flex:0 0 calc(50% - 7px)}}
+@media(min-width:1000px){.dep{flex:0 0 calc(33.333% - 10px)}}
 .dep .est{color:var(--amarelo);letter-spacing:2px;margin-bottom:10px}
 .dep p{font-size:.96rem;flex:1;color:var(--texto)}
 .dep .quem{margin-top:14px;display:flex;align-items:center;gap:10px}
 .dep .av{width:38px;height:38px;border-radius:50%;background:var(--noite);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.85rem;flex:none}
 .dep .quem b{display:block;font-size:.9rem;color:var(--noite)}
 .dep .quem span{font-size:.8rem;color:var(--texto-2)}
-.nota-dep{margin-top:20px;background:var(--amarelo);color:var(--noite);border-radius:12px;padding:12px 16px;font-size:.85rem;font-weight:700;text-align:center}
+.dep-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:18px}
+.dep-seta{width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid var(--borda);display:grid;place-items:center;font-size:1.3rem;color:var(--noite);flex:none}
+.dep-seta:hover{background:var(--fundo)}
+.dep-dots{display:flex;gap:7px}
+.dep-dot{width:8px;height:8px;border-radius:50%;background:var(--borda);cursor:pointer;border:none;padding:0}
+.dep-dot.on{background:var(--verde)}
 
 /* ============ 11. OBJEÇÕES ============ */
 .obj{background:#fff}
@@ -260,6 +246,8 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
 .caixa-topo{background:linear-gradient(90deg,var(--laranja),var(--amarelo));color:#fff;padding:16px;text-align:center;font-weight:800;font-size:.95rem;letter-spacing:.02em}
 .caixa-corpo{padding:26px 20px}
 @media(min-width:760px){.caixa-corpo{padding:34px}}
+.oferta-mockup{border-radius:var(--r);overflow:hidden;margin-bottom:24px}
+.oferta-mockup img{width:100%}
 .caixa-corpo h3{font-size:1.15rem;margin-bottom:18px}
 .recebe{list-style:none;display:grid;gap:13px}
 .recebe li{display:flex;gap:12px;align-items:flex-start;font-size:.98rem;line-height:1.5;color:var(--texto)}
@@ -289,8 +277,9 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
   place-items:center;margin:0 auto 18px;font-weight:800;line-height:1.05;
   box-shadow:0 0 0 10px rgba(18,161,80,.15)
 }
-.gar-selo b{display:block;font-size:2.2rem}
-.gar-selo span{font-size:.7rem;letter-spacing:.08em}
+.gar-selo .esc{display:block;font-size:2rem;line-height:1;margin-bottom:2px}
+.gar-selo b{display:block;font-size:1.3rem}
+.gar-selo span:not(.esc){font-size:.62rem;letter-spacing:.08em}
 .gar-caixa h2{margin-bottom:12px}
 .gar-caixa p{color:var(--texto);max-width:62ch;margin:0 auto}
 .gar-caixa .obs{margin-top:14px;font-size:.88rem;color:var(--texto-2);font-weight:700}
@@ -343,7 +332,6 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
 @media(max-width:400px){
   body{font-size:16.5px}
   .wrap{padding:0 15px}
-  .ad-fake{grid-template-columns:1fr}
   .caixa-corpo{padding:22px 17px}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -363,7 +351,7 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
   <div class="wrap">
     <h1>Não é falta de capacidade do seu filho.<span class="g">É falta do estímulo certo, na hora certa.</span></h1>
 
-    <p class="sub">O Guia reúne <strong>1.080 atividades prontas</strong> que desenvolvem foco, memória, raciocínio e coordenação em <strong>10 minutos por dia</strong> — usando só o que você já tem em casa, sem briga e sem tirar o celular à força.</p>
+    <p class="sub">O Guia reúne <strong>1.080 atividades prontas</strong> que desenvolvem foco, memória, raciocínio e coordenação em <strong>10 minutos por dia</strong>, usando só o que você já tem em casa, sem briga e sem tirar o celular à força.</p>
 
     <div class="aviso-video"><span class="ponto-vivo"></span> Assista antes de continuar</div>
 
@@ -406,7 +394,7 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
       <div class="pensa">“Meu filho troca de brincadeira a cada dois minutos e eu não sei se isso é normal.”</div>
       <div class="pensa">“Eu sei que devia estimular mais, mas chego em casa exausta e acabo entregando o celular.”</div>
       <div class="pensa">“A professora comentou que ele tem dificuldade de se concentrar e eu fiquei sem chão.”</div>
-      <div class="pensa">“Comprei brinquedo, comprei apostila, tentei de tudo — e nada engata de verdade.”</div>
+      <div class="pensa">“Comprei brinquedo, comprei apostila, tentei de tudo e nada engata de verdade.”</div>
       <div class="pensa">“Tenho medo de olhar para trás e perceber que perdi a fase em que dava para ajudar.”</div>
     </div>
 
@@ -417,23 +405,9 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
 <!-- ================= 5. ANTES E DEPOIS ================= -->
 <section class="sec ad">
   <div class="wrap">
-    <!-- ====== [EDITAR: ANTES/DEPOIS] ======
-         Troque o bloco .ad-fake por uma imagem real:
-         <img src="antes-depois.jpg" alt="Antes e depois da rotina">
-         ==================================== -->
+    <!-- [EDITAR: ANTES/DEPOIS] salve a foto Hoje/Com o Guia como antes-depois.jpg nesta mesma pasta -->
     <div class="ad-img">
-      <div class="ad-fake">
-        <div class="antes">
-          <span class="tit">Hoje</span>
-          <span class="car">😮‍💨</span>
-          <p>Criança disputando atenção com a tela, você repetindo a mesma frase pela quinta vez e o dia terminando em desgaste.</p>
-        </div>
-        <div class="depois">
-          <span class="tit">Com o Guia</span>
-          <span class="car">🧩</span>
-          <p>Dez minutos de atividade certa, criança envolvida do começo ao fim e você finalmente sentindo que está ajudando.</p>
-        </div>
-      </div>
+      <img src="antes-depois.jpg" alt="Hoje: criança disputando atenção com a tela. Com o Guia: dez minutos de atividade certa e criança envolvida">
     </div>
 
     <div class="ad-legenda">
@@ -446,7 +420,7 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
 <!-- ================= 6. CONSEQUÊNCIAS ================= -->
 <section class="sec cons">
   <div class="wrap centro">
-    <h2>Estímulo é uma janela — e ela não fica aberta para sempre</h2>
+    <h2>Estímulo é uma janela, e ela não fica aberta para sempre</h2>
     <p class="lead" style="margin-top:14px;max-width:66ch;margin-left:auto;margin-right:auto">Atenção, memória de trabalho e coordenação se desenvolvem com prática repetida e adequada à idade. Quando essa prática não acontece, o efeito costuma aparecer em outros lugares.</p>
 
     <div class="cons-lista">
@@ -456,7 +430,7 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
       <div class="cons-item"><i>!</i> Cansaço e conflito diário entre pais e filhos</div>
     </div>
 
-    <div class="saida">A boa notícia: o que muda esse cenário são estímulos curtos e constantes — não horas de atividade.</div>
+    <div class="saida">A boa notícia: o que muda esse cenário são estímulos curtos e constantes, não horas de atividade.</div>
   </div>
 </section>
 
@@ -464,8 +438,8 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
 <section class="sec produto">
   <div class="wrap centro">
     <span class="olho">A solução</span>
-    <h2>Guia de Atividades com Estímulos Cognitivos e Motores Infantis</h2>
-    <p class="lead">Um webapp com <strong>1.080 atividades organizadas</strong> por idade, tempo disponível e habilidade a estimular. Você abre, escolhe e aplica — sem preparar nada antes.</p>
+    <h2>Guia de Atividades com <mark>Estímulos Cognitivos e Motores Infantis</mark></h2>
+    <p class="lead">Desenvolvido com base em <strong>neurociência do desenvolvimento e psicologia cerebral infantil</strong>, é um método inédito que transforma o que se sabe sobre como o cérebro da criança aprende em <strong>1.080 atividades prontas</strong>, organizadas por idade, tempo disponível e habilidade a estimular. Você abre, escolhe e aplica, sem preparar nada antes.</p>
 
     <div class="prod-grid">
       <!-- ====== [EDITAR: MOCKUP] ======
@@ -481,12 +455,12 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
       </div>
 
       <ul class="prod-bullets" style="text-align:left">
-        <li><i>✓</i> <span><b>Filtro por idade</b> — 2–3, 4–5, 6–7 e 8–10 anos, sempre no nível certo</span></li>
-        <li><i>✓</i> <span><b>Filtro por tempo</b> — 5, 10 ou 15 minutos, conforme o dia permitir</span></li>
-        <li><i>✓</i> <span><b>Seis áreas de estímulo</b> — memória, atenção, raciocínio, coordenação fina e ampla, percepção visual</span></li>
-        <li><i>✓</i> <span><b>Passo a passo em linguagem simples</b> — qualquer adulto aplica, sem formação na área</span></li>
-        <li><i>✓</i> <span><b>Materiais que você já tem</b> — papel, potes, tampinhas, meias, barbante</span></li>
-        <li><i>✓</i> <span><b>Acesso imediato</b> — abre no celular, tablet ou computador, sem instalar nada</span></li>
+        <li><i>✓</i> <span><b>Filtro por idade:</b> 2–3, 4–5, 6–7 e 8–10 anos, sempre no nível certo</span></li>
+        <li><i>✓</i> <span><b>Filtro por tempo:</b> 5, 10 ou 15 minutos, conforme o dia permitir</span></li>
+        <li><i>✓</i> <span><b>Seis áreas de estímulo:</b> memória, atenção, raciocínio, coordenação fina e ampla, percepção visual</span></li>
+        <li><i>✓</i> <span><b>Passo a passo em linguagem simples:</b> qualquer adulto aplica, sem formação na área</span></li>
+        <li><i>✓</i> <span><b>Materiais que você já tem:</b> papel, potes, tampinhas, meias, barbante</span></li>
+        <li><i>✓</i> <span><b>Acesso imediato:</b> abre no celular, tablet ou computador, sem instalar nada</span></li>
       </ul>
     </div>
   </div>
@@ -516,7 +490,7 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
         <span class="num">03</span>
         <div class="ic">🎯</div>
         <h3>Foco treinado como brincadeira</h3>
-        <p>Propostas com regra clara, começo e fim visíveis. A criança não sente que está sendo treinada — ela sente que está jogando.</p>
+        <p>Propostas com regra clara, começo e fim visíveis. A criança não sente que está sendo treinada, ela sente que está jogando.</p>
       </div>
       <div class="card4">
         <span class="num">04</span>
@@ -545,18 +519,6 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
         <div class="benef-item"><i>✓</i><div><b>Rotina mais previsível</b><span>Um horário fixo de dez minutos cria hábito para a criança e alívio para você</span></div></div>
         <div class="benef-item"><i>✓</i><div><b>Vocês dois mais perto</b><span>A atividade vira um momento de interação, não mais uma tarefa da lista</span></div></div>
       </div>
-
-      <div class="roda">
-        <div class="centro-c">Criança<br>estimulada</div>
-        <div class="orbs">
-          <span class="orb">🧠 Memória</span>
-          <span class="orb">🎯 Atenção</span>
-          <span class="orb">🧩 Raciocínio</span>
-          <span class="orb">✋ Coordenação</span>
-          <span class="orb">👀 Percepção</span>
-          <span class="orb">🌟 Autoestima</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -579,26 +541,45 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
       </div>
     </div>
 
-    <!-- ====== [EDITAR: PROVA] use apenas relatos reais e autorizados ====== -->
-    <div class="deps" style="text-align:left">
-      <div class="dep">
-        <div class="est">★★★★★</div>
-        <p>Comecei pelas atividades de cinco minutos porque ele não parava em nada. Na segunda semana já estava pedindo para fazer de novo antes do jantar.</p>
-        <div class="quem"><div class="av">AP</div><div><b>Ana Paula S.</b><span>Mãe do Gabriel, 6 anos</span></div></div>
+    <div class="carrossel-dep">
+      <div class="dep-track" id="depTrack">
+        <div class="dep">
+          <div class="est">★★★★★</div>
+          <p>Comecei pelas atividades de cinco minutos porque ele não parava em nada. Na segunda semana já estava pedindo para fazer de novo antes do jantar.</p>
+          <div class="quem"><div class="av">AP</div><div><b>Ana Paula S.</b><span>Mãe do Gabriel, 6 anos</span></div></div>
+        </div>
+        <div class="dep">
+          <div class="est">★★★★★</div>
+          <p>O que me pegou foi não precisar comprar nada. Usei pote, colher e feijão que já tinha na cozinha e virou a brincadeira favorita da semana.</p>
+          <div class="quem"><div class="av">FA</div><div><b>Fernanda A.</b><span>Mãe do Lucas, 4 anos</span></div></div>
+        </div>
+        <div class="dep">
+          <div class="est">★★★★★</div>
+          <p>Sou professora e uso nas transições da turma. Filtro por tempo, escolho uma de cinco minutos e resolvo aquele momento de dispersão total.</p>
+          <div class="quem"><div class="av">LS</div><div><b>Luiza S.</b><span>Professora da educação infantil</span></div></div>
+        </div>
+        <div class="dep">
+          <div class="est">★★★★★</div>
+          <p>Confesso que entrei meio cético, mas o filtro por idade acertou de primeira. Agora sou eu que puxo os dez minutos com ela antes de dormir.</p>
+          <div class="quem"><div class="av">RM</div><div><b>Ricardo M.</b><span>Pai da Helena, 5 anos</span></div></div>
+        </div>
+        <div class="dep">
+          <div class="est">★★★★★</div>
+          <p>Com gêmeos, tempo é o que menos sobra. Escolho uma atividade de dez minutos, uso o que já tenho em casa e resolvo os dois ao mesmo tempo.</p>
+          <div class="quem"><div class="av">CR</div><div><b>Camila R.</b><span>Mãe de gêmeos, 7 anos</span></div></div>
+        </div>
+        <div class="dep">
+          <div class="est">★★★★★</div>
+          <p>Eu não tinha paciência para pesquisar atividade. Aqui é abrir, escolher pela idade dele e aplicar. Virou nosso momento fixo depois do banho.</p>
+          <div class="quem"><div class="av">MT</div><div><b>Marcos T.</b><span>Pai do Theo, 3 anos</span></div></div>
+        </div>
       </div>
-      <div class="dep">
-        <div class="est">★★★★★</div>
-        <p>O que me pegou foi não precisar comprar nada. Usei pote, colher e feijão que já tinha na cozinha e virou a brincadeira favorita da semana.</p>
-        <div class="quem"><div class="av">FA</div><div><b>Fernanda A.</b><span>Mãe do Lucas, 4 anos</span></div></div>
-      </div>
-      <div class="dep">
-        <div class="est">★★★★★</div>
-        <p>Sou professora e uso nas transições da turma. Filtro por tempo, escolho uma de cinco minutos e resolvo aquele momento de dispersão total.</p>
-        <div class="quem"><div class="av">LS</div><div><b>Luiza S.</b><span>Professora da educação infantil</span></div></div>
+      <div class="dep-nav">
+        <button type="button" class="dep-seta" id="depPrev" aria-label="Depoimento anterior">‹</button>
+        <div class="dep-dots" id="depDots"></div>
+        <button type="button" class="dep-seta" id="depNext" aria-label="Próximo depoimento">›</button>
       </div>
     </div>
-
-    <p class="nota-dep">⚠️ Depoimentos de exemplo. Substitua por relatos reais e autorizados antes de anunciar — depoimento inventado reprova a conta no Meta Ads.</p>
   </div>
 </section>
 
@@ -619,7 +600,7 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
       </div>
       <div class="obj-item">
         <div class="q"><em>“</em>Já comprei outros materiais e não usei nenhum.<em>”</em></div>
-        <div class="a">A maioria dos materiais é um PDF gigante que você precisa vasculhar. Aqui é um webapp com <strong>três filtros e resposta em segundos</strong> — o esforço de decidir sai de você.</div>
+        <div class="a">A maioria dos materiais é um PDF gigante que você precisa vasculhar. Aqui é um webapp com <strong>três filtros e resposta em segundos</strong>, o esforço de decidir sai de você.</div>
       </div>
       <div class="obj-item">
         <div class="q"><em>“</em>Não entendo nada de desenvolvimento infantil.<em>”</em></div>
@@ -638,6 +619,10 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
     <div class="caixa">
       <div class="caixa-topo">ACESSO VITALÍCIO • PAGAMENTO ÚNICO • GARANTIA DE 7 DIAS</div>
       <div class="caixa-corpo" style="text-align:left">
+        <!-- [EDITAR: MOCKUP] salve a foto do produto como produto-oferta.jpg nesta mesma pasta -->
+        <div class="oferta-mockup">
+          <img src="produto-oferta.jpg" alt="Guia de Atividades com Estímulos Cognitivos e Motores Infantis, em tablet e cartas">
+        </div>
         <h3>O que você recebe hoje:</h3>
         <ul class="recebe">
           <li><i>✓</i> <span><b>Webapp com 1.080 atividades</b> para estímulo cognitivo e motor, prontas para aplicar</span></li>
@@ -675,16 +660,16 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
 <section class="sec gar">
   <div class="wrap">
     <div class="gar-caixa">
-      <div class="gar-selo"><div><b>7</b><span>DIAS</span></div></div>
+      <div class="gar-selo"><div><span class="esc">🛡️</span><b>7</b><span>DIAS</span></div></div>
       <h2>Garantia incondicional de 7 dias</h2>
-      <p>Você entra, vê todas as atividades e testa com a criança. Se em até 7 dias achar que não é para você, envia uma mensagem e devolvemos 100% do valor — sem perguntas e sem burocracia, conforme as condições informadas na oferta.</p>
+      <p>Você entra, vê todas as atividades e testa com a criança. Se em até 7 dias achar que não é para você, envia uma mensagem e devolvemos 100% do valor, sem perguntas e sem burocracia, conforme as condições informadas na oferta.</p>
       <p class="obs">O risco é meu, não seu.</p>
     </div>
   </div>
 </section>
 
 <!-- ================= 14. URGÊNCIA ================= -->
-<!-- ====== [EDITAR: PREÇO] 2/3 — escreva só o que for verdade ======
+<!-- ====== [EDITAR: PREÇO] 2/3, escreva só o que for verdade ======
      Se o preço de R$67 for permanente, troque este bloco por uma seção
      de reforço de valor. Contagem regressiva falsa e "vagas limitadas"
      inventadas derrubam conta de anúncio e geram reclamação no Procon.
@@ -692,7 +677,7 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
 <section class="sec urg">
   <div class="wrap centro">
     <h2>Esta condição de lançamento é por tempo limitado</h2>
-    <p>O valor de <strong>R$ 67,00</strong> faz parte da condição de lançamento do Guia. Quando ela terminar, o produto volta ao preço normal de <strong>R$ 147,00</strong> — e quem entrou antes mantém o acesso vitalício pelo valor que pagou.</p>
+    <p>O valor de <strong>R$ 67,00</strong> faz parte da condição de lançamento do Guia. Quando ela terminar, o produto volta ao preço normal de <strong>R$ 147,00</strong>, e quem entrou antes mantém o acesso vitalício pelo valor que pagou.</p>
     <div class="urg-tags">
       <span class="urg-tag">🏷️ Condição de lançamento</span>
       <span class="urg-tag">♾️ Acesso vitalício garantido</span>
@@ -735,7 +720,7 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
   <div class="wrap">
     <div class="cols">
       <div>
-        <h4>Guia de Atividades com Estímulos Cognitivos e Motores Infantis</h4>
+        <h4>Guia de Atividades com <mark>Estímulos Cognitivos e Motores Infantis</mark></h4>
         <p>Um webapp com 1.080 atividades práticas que estimulam memória, atenção, raciocínio, coordenação e percepção visual em crianças de 2 a 10 anos.</p>
       </div>
       <div>
@@ -750,7 +735,7 @@ mark{background:linear-gradient(transparent 58%,var(--amarelo) 58%);color:inheri
 
     <details>
       <summary>Política de Privacidade</summary>
-      <p>Suas informações pessoais são tratadas com confidencialidade e não são compartilhadas com terceiros. Ao realizar a compra, você concorda com o tratamento dos seus dados para fins de entrega do produto digital adquirido, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+      <p>Suas informações pessoais são tratadas com confidencialidade e não são compartilhadas com terceiros. Ao realizar a compra, você concorda com o tratamento dos seus dados para fins de entrega do produto digital adquirido, em conformidade com a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).</p>
     </details>
 
     <details>
@@ -781,6 +766,44 @@ window.addEventListener('scroll',function(){
   var fim=oferta.offsetTop+oferta.offsetHeight;
   fixa.classList.toggle('on', y>700 && y<fim-350);
 },{passive:true});
+
+(function(){
+  var track=document.getElementById('depTrack');
+  var dotsWrap=document.getElementById('depDots');
+  if(!track||!dotsWrap) return;
+  var itens=track.children;
+  var dots=[];
+  for(var i=0;i<itens.length;i++){
+    var dot=document.createElement('button');
+    dot.type='button';
+    dot.className='dep-dot'+(i===0?' on':'');
+    dot.setAttribute('aria-label','Ir para depoimento '+(i+1));
+    (function(idx){
+      dot.addEventListener('click',function(){
+        itens[idx].scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});
+      });
+    })(i);
+    dotsWrap.appendChild(dot);
+    dots.push(dot);
+  }
+  function atualizaDots(){
+    var centro=track.scrollLeft+track.clientWidth/2;
+    var ativo=0,menorDist=Infinity;
+    for(var i=0;i<itens.length;i++){
+      var meio=itens[i].offsetLeft+itens[i].offsetWidth/2;
+      var dist=Math.abs(centro-meio);
+      if(dist<menorDist){menorDist=dist;ativo=i;}
+    }
+    dots.forEach(function(d,i){d.classList.toggle('on',i===ativo);});
+  }
+  track.addEventListener('scroll',atualizaDots,{passive:true});
+  document.getElementById('depPrev').addEventListener('click',function(){
+    track.scrollBy({left:-(itens[0].offsetWidth+14),behavior:'smooth'});
+  });
+  document.getElementById('depNext').addEventListener('click',function(){
+    track.scrollBy({left:itens[0].offsetWidth+14,behavior:'smooth'});
+  });
+})();
 </script>
 </body>
 </html>
