@@ -168,19 +168,8 @@ p{margin:0}
 .prod-grid{display:grid;gap:30px;align-items:center;margin-top:34px}
 @media(min-width:820px){.prod-grid{grid-template-columns:.85fr 1.15fr;gap:44px}}
 
-/* mockup em CSS, troque pela imagem real */
-.mock{position:relative;max-width:290px;margin:0 auto;width:100%}
-.mock-capa{
-  aspect-ratio:3/4;border-radius:8px 18px 18px 8px;
-  background:linear-gradient(150deg,#FF6A28,#FFC53D);
-  box-shadow:0 26px 54px -18px rgba(0,0,0,.65);
-  padding:26px 22px;display:grid;align-content:space-between;color:#fff;
-  border-left:9px solid rgba(0,0,0,.22)
-}
-.mock-capa .sel{font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:rgba(0,0,0,.22);padding:6px 12px;border-radius:100px;justify-self:start}
-.mock-capa .tt{font-size:1.42rem;font-weight:800;line-height:1.15;letter-spacing:-.02em}
-.mock-capa .nn{font-size:2.5rem;font-weight:800;line-height:1}
-.mock-capa .nn small{display:block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.mock{max-width:420px;margin:0 auto;width:100%}
+.mock img{border-radius:var(--r-lg);box-shadow:0 26px 54px -18px rgba(0,0,0,.5)}
 .prod-bullets{display:grid;gap:14px}
 .prod-bullets li{display:flex;gap:13px;align-items:flex-start;list-style:none;font-size:1rem;color:rgba(255,255,255,.9)}
 .prod-bullets i{flex:none;font-style:normal;width:26px;height:26px;border-radius:9px;background:var(--verde);color:#fff;display:grid;place-items:center;font-size:.78rem;margin-top:2px}
@@ -341,7 +330,7 @@ p{margin:0}
 <!-- [EDITAR: PROVA] use um número verdadeiro. Se ainda não tem base,
      troque por: "Material digital • Acesso imediato após a compra" -->
 <div class="barra-prova">
-  ⭐ Mais de <b>[SEU NÚMERO]</b> famílias já usam o Guia na rotina em casa
+  ⭐<b>+9.000</b> famílias e profissionais já usam o Guia em sua rotina
 </div>
 
 <!-- ================= 2 + 3. HERO COM VSL ================= -->
@@ -349,7 +338,7 @@ p{margin:0}
   <div class="wrap">
     <h1>Guia de Atividades com <span class="g">Estímulos Cognitivos e Motores Infantis</span></h1>
 
-    <p class="sub">Desenvolvido com base em <strong>neurociência do desenvolvimento e psicologia cerebral infantil</strong>, reúne <strong>1.080 atividades prontas</strong> que estimulam foco, memória, raciocínio e coordenação em <strong>10 minutos por dia</strong>, usando só o que você já tem em casa.</p>
+    <p class="sub">Desenvolvido com base em <strong>neurociência do desenvolvimento e psicologia cerebral infantil</strong>, reúne <strong>+1.080 atividades prontas</strong> que estimulam <strong>memória, atenção, raciocínio, coordenação fina, coordenação ampla e percepção visual</strong> em <strong>10 minutos por dia</strong>, usando só o que você já tem em casa.</p>
 
     <div class="aviso-video"><span class="ponto-vivo"></span> Assista antes de continuar</div>
 
@@ -436,19 +425,11 @@ p{margin:0}
   <div class="wrap centro">
     <span class="olho">A solução</span>
     <h2>Guia de Atividades com <span class="realce">Estímulos Cognitivos e Motores Infantis</span></h2>
-    <p class="lead">Desenvolvido com base em <strong>neurociência do desenvolvimento e psicologia cerebral infantil</strong>, é um método inédito que transforma o que se sabe sobre como o cérebro da criança aprende em <strong>1.080 atividades prontas</strong>, organizadas por idade, tempo disponível e habilidade a estimular. Você abre, escolhe e aplica, sem preparar nada antes.</p>
+    <p class="lead">Cada atividade foi pensada para a fase exata de desenvolvimento da criança, nada de material genérico. São <strong>+1.080 atividades prontas</strong>, organizadas por idade, tempo disponível e habilidade a estimular. Você abre, escolhe e aplica, sem preparar nada antes.</p>
 
     <div class="prod-grid">
-      <!-- ====== [EDITAR: MOCKUP] ======
-           Troque o bloco .mock por uma imagem real do produto:
-           <img src="mockup.jpg" alt="Guia de Atividades">
-           ============================== -->
       <div class="mock">
-        <div class="mock-capa">
-          <span class="sel">Webapp • Acesso vitalício</span>
-          <div class="tt">Guia de Atividades com Estímulos Cognitivos e Motores</div>
-          <div class="nn">1.080<small>atividades prontas</small></div>
-        </div>
+        <img src="https://raw.githubusercontent.com/guiadeatividadesmotoras/kidsofc/main/WhatsApp%20Image%202026-09-10%20at%2014.16.15.jpeg" alt="Guia de Atividades com Estímulos Cognitivos e Motores Infantis, em tablet e cartas">
       </div>
 
       <ul class="prod-bullets" style="text-align:left">
@@ -632,10 +613,10 @@ p{margin:0}
 
         <!-- [EDITAR: PREÇO] 1/3 -->
         <div class="preco-bloco">
-          <span class="desconto">55% DE DESCONTO</span>
-          <div class="de">De <s>R$ 147,00</s></div>
+          <span class="desconto">63% DE DESCONTO</span>
+          <div class="de">De <s>R$ 127,00</s></div>
           <div class="por">por apenas</div>
-          <div class="preco"><sup>R$</sup>67</div>
+          <div class="preco"><sup>R$</sup>47</div>
           <div class="parcela">à vista ou parcelado em até 12x no cartão</div>
 
           <!-- [EDITAR: CHECKOUT] 1/4 -->
@@ -666,14 +647,14 @@ p{margin:0}
 
 <!-- ================= 14. URGÊNCIA ================= -->
 <!-- ====== [EDITAR: PREÇO] 2/3, escreva só o que for verdade ======
-     Se o preço de R$67 for permanente, troque este bloco por uma seção
+     Se o preço de R$47 for permanente, troque este bloco por uma seção
      de reforço de valor. Contagem regressiva falsa e "vagas limitadas"
      inventadas derrubam conta de anúncio e geram reclamação no Procon.
      ============================================================== -->
 <section class="sec urg">
   <div class="wrap centro">
     <h2>Esta condição de lançamento é por tempo limitado</h2>
-    <p>O valor de <strong>R$ 67,00</strong> faz parte da condição de lançamento do Guia. Quando ela terminar, o produto volta ao preço normal de <strong>R$ 147,00</strong>, e quem entrou antes mantém o acesso vitalício pelo valor que pagou.</p>
+    <p>O valor de <strong>R$ 47,00</strong> faz parte da condição de lançamento do Guia. Quando ela terminar, o produto volta ao preço normal de <strong>R$ 127,00</strong>, e quem entrou antes mantém o acesso vitalício pelo valor que pagou.</p>
     <div class="urg-tags">
       <span class="urg-tag">🏷️ Condição de lançamento</span>
       <span class="urg-tag">♾️ Acesso vitalício garantido</span>
@@ -690,15 +671,10 @@ p{margin:0}
     <p>Menos do que você gasta em um lanche de fim de semana para ter, todo dia, a atividade certa na mão.</p>
 
     <div class="mock">
-      <div class="mock-capa">
-        <span class="sel">Webapp • Acesso vitalício</span>
-        <div class="tt">Guia de Atividades com Estímulos Cognitivos e Motores</div>
-        <div class="nn">+1.080<small>atividades prontas</small></div>
-      </div>
+      <img src="https://raw.githubusercontent.com/guiadeatividadesmotoras/kidsofc/main/WhatsApp%20Image%202026-09-10%20at%2014.16.15.jpeg" alt="Guia de Atividades com Estímulos Cognitivos e Motores Infantis, em tablet e cartas">
     </div>
 
-    <!-- [EDITAR: PREÇO] 3/3 -->
-    <div class="fechamento">De <s>R$ 147,00</s> por apenas <b>R$ 67,00</b></div>
+    <div class="fechamento">De <s>R$ 127,00</s> por apenas <b>R$ 47,00</b></div>
 
     <!-- [EDITAR: CHECKOUT] 2/4 -->
     <a href="https://ggcheckout.app/checkout/v5/zbadjKm007EiXZc9E389" class="btn btn-l">QUERO DESENVOLVER O FOCO E A COORDENAÇÃO DO MEU FILHO</a>
@@ -724,7 +700,7 @@ p{margin:0}
         <ul>
           <li><a href="#oferta">Ver a oferta</a></li>
           <!-- [EDITAR: SUPORTE] -->
-          <li><a href="mailto:suporte@seudominio.com.br">suporte@seudominio.com.br</a></li>
+          <li><a href="mailto:suporte@guiadeatividades.com.br">suporte@guiadeatividades.com.br</a></li>
         </ul>
       </div>
     </div>
@@ -749,7 +725,7 @@ p{margin:0}
 
 <!-- ================= BARRA FIXA MOBILE ================= -->
 <div class="fixa" id="fixa">
-  <div class="p"><s>R$ 147</s><b>R$ 67</b></div>
+  <div class="p"><s>R$ 127</s><b>R$ 47</b></div>
   <!-- [EDITAR: CHECKOUT] 3/4 -->
   <a href="https://ggcheckout.app/checkout/v5/zbadjKm007EiXZc9E389" class="btn">QUERO O GUIA</a>
 </div>
@@ -764,41 +740,69 @@ window.addEventListener('scroll',function(){
 },{passive:true});
 
 (function(){
+  var carrossel=document.querySelector('.carrossel-dep');
   var track=document.getElementById('depTrack');
   var dotsWrap=document.getElementById('depDots');
   if(!track||!dotsWrap) return;
   var itens=track.children;
   var dots=[];
+  var atual=0;
+  var timer=null;
+  var visivel=false;
+
   for(var i=0;i<itens.length;i++){
     var dot=document.createElement('button');
     dot.type='button';
     dot.className='dep-dot'+(i===0?' on':'');
     dot.setAttribute('aria-label','Ir para depoimento '+(i+1));
     (function(idx){
-      dot.addEventListener('click',function(){
-        itens[idx].scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});
-      });
+      dot.addEventListener('click',function(){ ir(idx); reiniciaAuto(); });
     })(i);
     dotsWrap.appendChild(dot);
     dots.push(dot);
   }
-  function atualizaDots(){
-    var centro=track.scrollLeft+track.clientWidth/2;
-    var ativo=0,menorDist=Infinity;
-    for(var i=0;i<itens.length;i++){
-      var meio=itens[i].offsetLeft+itens[i].offsetWidth/2;
-      var dist=Math.abs(centro-meio);
-      if(dist<menorDist){menorDist=dist;ativo=i;}
-    }
-    dots.forEach(function(d,i){d.classList.toggle('on',i===ativo);});
+
+  function marcaAtivo(idx){
+    atual=idx;
+    dots.forEach(function(d,i){d.classList.toggle('on',i===idx);});
   }
-  track.addEventListener('scroll',atualizaDots,{passive:true});
-  document.getElementById('depPrev').addEventListener('click',function(){
-    track.scrollBy({left:-(itens[0].offsetWidth+14),behavior:'smooth'});
-  });
-  document.getElementById('depNext').addEventListener('click',function(){
-    track.scrollBy({left:itens[0].offsetWidth+14,behavior:'smooth'});
-  });
+
+  function ir(idx){
+    if(idx<0) idx=itens.length-1;
+    if(idx>=itens.length) idx=0;
+    track.scrollTo({left:itens[idx].offsetLeft,behavior:'smooth'});
+    marcaAtivo(idx);
+  }
+
+  function atualizaPelaRolagem(){
+    var maxScroll=track.scrollWidth-track.clientWidth;
+    var razao=maxScroll>0?track.scrollLeft/maxScroll:0;
+    var idx=Math.round(razao*(itens.length-1));
+    if(idx!==atual) marcaAtivo(idx);
+  }
+  track.addEventListener('scroll',atualizaPelaRolagem,{passive:true});
+
+  function paraAuto(){
+    if(timer){clearInterval(timer);timer=null;}
+  }
+  function reiniciaAuto(){
+    paraAuto();
+    if(!visivel) return;
+    timer=setInterval(function(){ ir(atual+1); },7000);
+  }
+
+  document.getElementById('depPrev').addEventListener('click',function(){ ir(atual-1); reiniciaAuto(); });
+  document.getElementById('depNext').addEventListener('click',function(){ ir(atual+1); reiniciaAuto(); });
+
+  if(carrossel&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(entradas){
+      visivel=entradas[0].isIntersecting;
+      if(visivel) reiniciaAuto(); else paraAuto();
+    },{threshold:.4}).observe(carrossel);
+  } else {
+    visivel=true;
+    reiniciaAuto();
+  }
 })();
 </script>
 </body>
