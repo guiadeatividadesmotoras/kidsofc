@@ -327,23 +327,12 @@ p{margin:0}
 
     <p class="sub">Desenvolvido com base em <strong>neurociência do desenvolvimento e psicologia cerebral infantil</strong>, reúne <strong>+1.080 atividades prontas</strong> que estimulam <strong>memória, atenção, raciocínio, coordenação fina, coordenação ampla e percepção visual</strong> em <strong>10 minutos por dia</strong>, usando só o que você já tem em casa.</p>
 
-    <div class="aviso-video"><span class="ponto-vivo"></span> Assista antes de continuar</div>
+    <!-- VSL oculta por enquanto (anúncio vai ao ar sem vídeo). Para reativar quando o vídeo estiver pronto:
+         1. remova o atributo hidden dos dois blocos abaixo (aviso-video e video v-916)
+         2. dentro do .video-vazio, cole o iframe/video conforme o comentário original -->
+    <div class="aviso-video" hidden><span class="ponto-vivo"></span> Assista antes de continuar</div>
 
-    <!-- ============ [EDITAR: VSL] ============
-         Troque a classe do container para escolher o formato:
-           v-916  → vídeo vertical (9:16), ideal para tráfego mobile
-           v-169  → vídeo horizontal (16:9)
-
-         Apague a <div class="video-vazio"> e cole um destes:
-
-         <iframe src="https://player.vimeo.com/video/SEU_ID" allowfullscreen
-                 allow="autoplay; fullscreen; picture-in-picture"></iframe>
-
-         <video controls playsinline preload="metadata" poster="capa.jpg">
-           <source src="vsl.mp4" type="video/mp4">
-         </video>
-         ======================================= -->
-    <div class="video v-916">
+    <div class="video v-916" hidden>
       <div class="video-vazio">
         <div>
           <div class="play">▶</div>
@@ -500,8 +489,8 @@ p{margin:0}
     <h2>O que as famílias estão contando</h2>
     <p class="lead" style="margin-top:12px">Relatos de quem já colocou o Guia na rotina.</p>
 
-    <!-- ====== [EDITAR: VÍDEO-PROVA] mesma lógica da VSL ====== -->
-    <div class="video v-916">
+    <!-- Vídeo-prova oculto por enquanto. Para reativar: remova o atributo hidden abaixo e cole o iframe/video -->
+    <div class="video v-916" hidden>
       <div class="video-vazio">
         <div>
           <div class="play">▶</div>
@@ -600,7 +589,7 @@ p{margin:0}
           <li><i>✓</i> <span><b>Três níveis de dificuldade</b> (fácil → médio → avançado) para a criança evoluir dentro da mesma atividade</span></li>
           <li><i>✓</i> <span><b>Atividades com materiais de casa</b>, sem precisar comprar nem imprimir nada</span></li>
           <li><i>✓</i> <span><b>Bônus: Desafio de 21 dias</b> para transformar os dez minutos diários em hábito</span></li>
-          <li><i>✓</i> <span><b>Acesso imediato</b> por WhatsApp e e-mail logo após a confirmação do pagamento</span></li>
+          <li><i>✓</i> <span><b>Acesso imediato</b> por e-mail logo após a confirmação do pagamento</span></li>
         </ul>
 
         <!-- [EDITAR: PREÇO] 1/3 -->
