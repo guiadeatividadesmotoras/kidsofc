@@ -303,19 +303,6 @@ p{margin:0}
 .rodape details p{margin-top:10px;line-height:1.6}
 .rodape .fim{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;margin-top:10px;line-height:1.6}
 
-/* ============ BARRA FIXA MOBILE ============ */
-.fixa{
-  position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--borda);
-  padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;
-  transform:translateY(130%);transition:transform .3s ease;box-shadow:0 -8px 26px -16px rgba(16,26,56,.6)
-}
-.fixa.on{transform:none}
-@media(min-width:760px){.fixa{display:none}}
-.fixa .p{line-height:1.1}
-.fixa .p s{font-size:.74rem;color:var(--texto-2)}
-.fixa .p b{display:block;font-size:1.3rem;font-weight:800;color:var(--verde)}
-.fixa .btn{flex:1;padding:14px 12px;font-size:.94rem;animation:none}
-
 @media(max-width:400px){
   body{font-size:16.5px}
   .wrap{padding:0 15px}
@@ -441,6 +428,11 @@ p{margin:0}
         <li><i>✓</i> <span><b>Acesso imediato:</b> abre no celular, tablet ou computador, sem instalar nada</span></li>
       </ul>
     </div>
+
+    <a href="https://ggcheckout.app/checkout/v5/Iw9tqMlJLT58qgaOycQL" class="btn btn-l" style="margin-top:34px">QUERO O GUIA AGORA - R$47,00</a>
+
+    <p class="continue">Continue lendo para entender melhor</p>
+    <span class="seta-baixo">↓</span>
   </div>
 </section>
 
@@ -620,7 +612,7 @@ p{margin:0}
           <div class="parcela">à vista ou parcelado em até 12x no cartão</div>
 
           <!-- [EDITAR: CHECKOUT] 1/4 -->
-          <a href="https://ggcheckout.app/checkout/v5/zbadjKm007EiXZc9E389" class="btn btn-l">QUERO O GUIA AGORA</a>
+          <a href="https://ggcheckout.app/checkout/v5/Iw9tqMlJLT58qgaOycQL" class="btn btn-l">QUERO O GUIA AGORA</a>
 
           <div class="selos">
             <span>🔒 Compra segura</span>
@@ -677,7 +669,7 @@ p{margin:0}
     <div class="fechamento">De <s>R$ 127,00</s> por apenas <b>R$ 47,00</b></div>
 
     <!-- [EDITAR: CHECKOUT] 2/4 -->
-    <a href="https://ggcheckout.app/checkout/v5/zbadjKm007EiXZc9E389" class="btn btn-l">QUERO DESENVOLVER O FOCO E A COORDENAÇÃO DO MEU FILHO</a>
+    <a href="https://ggcheckout.app/checkout/v5/Iw9tqMlJLT58qgaOycQL" class="btn btn-l">QUERO DESENVOLVER O FOCO E A COORDENAÇÃO DO MEU FILHO</a>
 
     <div class="selos" style="color:rgba(255,255,255,.65)">
       <span>Garantia de 7 dias</span>
@@ -723,22 +715,7 @@ p{margin:0}
   </div>
 </footer>
 
-<!-- ================= BARRA FIXA MOBILE ================= -->
-<div class="fixa" id="fixa">
-  <div class="p"><s>R$ 127</s><b>R$ 47</b></div>
-  <!-- [EDITAR: CHECKOUT] 3/4 -->
-  <a href="https://ggcheckout.app/checkout/v5/zbadjKm007EiXZc9E389" class="btn">QUERO O GUIA</a>
-</div>
-
 <script>
-var fixa=document.getElementById('fixa');
-var oferta=document.getElementById('oferta');
-window.addEventListener('scroll',function(){
-  var y=window.scrollY;
-  var fim=oferta.offsetTop+oferta.offsetHeight;
-  fixa.classList.toggle('on', y>700 && y<fim-350);
-},{passive:true});
-
 (function(){
   var carrossel=document.querySelector('.carrossel-dep');
   var track=document.getElementById('depTrack');
