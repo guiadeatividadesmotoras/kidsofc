@@ -9,23 +9,12 @@
 
 <!-- ================================================================
      ZONAS EDITÁVEIS
-     1. [EDITAR: CHECKOUT]   → link do GGCheckout (4 lugares)
-     2. [EDITAR: PREÇO]      → valores (3 lugares)
-     3. [EDITAR: VSL]        → vídeo de vendas do topo
-     4. [EDITAR: VÍDEO-PROVA]→ vídeo de depoimento
-     5. [EDITAR: ANTES/DEPOIS] → imagem comparativa
-     6. [EDITAR: MOCKUP]     → imagem do produto
-     7. [EDITAR: PROVA]      → nº de famílias / depoimentos
-     8. [EDITAR: PIXEL]      → Meta Pixel
-     9. [EDITAR: SUPORTE]    → e-mail de contato
+     [EDITAR: VSL] → substitua SEU_ID_VIMEO e SEU_HASH_VIMEO abaixo
+                     Ex: https://vimeo.com/1181423029?h=c27696bd8c
+                     ID   = 1181423029
+                     hash = c27696bd8c  (parte após ?h= — omita se o
+                            vídeo for público/sem senha)
      ================================================================ -->
-
-<!-- ===== [EDITAR: PIXEL] =====
-<script>
-  !function(f,b,e,v,n,t,s){...}
-  fbq('init','SEU_PIXEL_ID'); fbq('track','PageView');
-</script>
--->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,7 +60,6 @@ p{margin:0}
 .dourado{color:var(--laranja)}
 .realce{color:var(--amarelo)}
 
-/* eyebrow */
 .olho{
   display:inline-flex;align-items:center;gap:8px;
   background:var(--laranja-cl);color:var(--laranja);
@@ -79,7 +67,6 @@ p{margin:0}
   padding:7px 16px;border-radius:100px;margin-bottom:16px
 }
 
-/* botões */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:9px;text-align:center;
   background:var(--verde);color:#fff;font-weight:800;font-size:1.02rem;line-height:1.25;
@@ -94,11 +81,9 @@ p{margin:0}
 .selos span{display:inline-flex;align-items:center;gap:6px}
 :focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:8px}
 
-/* ============ 1. BARRA DE PROVA SOCIAL ============ */
 .barra-prova{background:var(--noite);color:#fff;text-align:center;padding:11px 18px;font-size:.85rem;font-weight:600}
 .barra-prova b{color:var(--amarelo)}
 
-/* ============ 2+3. HERO + VSL ============ */
 .hero{background:linear-gradient(180deg,#101A38 0%,#1B2A55 100%);color:#fff;padding:36px 0 44px;text-align:center}
 .hero h1{color:#fff;margin-bottom:16px}
 .hero h1 .g{color:var(--amarelo);display:block}
@@ -109,29 +94,24 @@ p{margin:0}
   border:1px solid rgba(255,255,255,.2);color:#fff;font-weight:700;font-size:.92rem;
   padding:9px 18px;border-radius:100px;margin-bottom:18px
 }
-.ponto-vivo{width:9px;height:9px;border-radius:50%;background:var(--vermelho);animation:vivo 1.4s infinite}
+.ponto-vivo{width:9px;height:9px;border-radius:50%;background:var(--vermelho);animation:vivo 1.4s infinite;flex:none}
 @keyframes vivo{0%,100%{opacity:1}50%{opacity:.25}}
 
+/* ── CONTAINER DE VÍDEO 9:16 ── */
 .video{
   position:relative;width:100%;background:#000;border-radius:20px;overflow:hidden;
   box-shadow:0 24px 50px -20px rgba(0,0,0,.6);margin:0 auto
 }
-.video iframe,.video video{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;object-fit:cover}
-.v-916{aspect-ratio:9/16;max-width:320px}
+.v-916{aspect-ratio:9/16;max-width:360px}
 .v-169{aspect-ratio:16/9;max-width:720px}
-.video-vazio{
-  position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:22px;
-  background:linear-gradient(150deg,#1B2A55,#101A38);color:rgba(255,255,255,.9)
+.video iframe,.video video{
+  position:absolute;inset:0;width:100%;height:100%;border:0;display:block;object-fit:cover
 }
-.video-vazio .play{width:62px;height:62px;border-radius:50%;background:var(--amarelo);color:var(--noite);display:grid;place-items:center;font-size:1.4rem;margin:0 auto 14px}
-.video-vazio strong{display:block;font-size:1rem;margin-bottom:6px;color:#fff}
-.video-vazio span{display:block;font-size:.8rem;opacity:.75;line-height:1.5}
 
 .continue{margin-top:22px;color:rgba(255,255,255,.7);font-size:.9rem;font-weight:600}
 .seta-baixo{display:block;margin:8px auto 0;font-size:1.3rem;animation:desce 1.8s infinite}
 @keyframes desce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 
-/* ============ 4. PENSAMENTOS / DOR ============ */
 .dor{background:#fff}
 .dor h2{margin-bottom:26px}
 .pensamentos{display:grid;gap:12px;max-width:720px;margin:0 auto}
@@ -141,13 +121,11 @@ p{margin:0}
 }
 .dor .fecha{margin-top:24px;font-weight:700;font-size:1.08rem;color:var(--noite)}
 
-/* ============ 5. ANTES E DEPOIS ============ */
 .ad{background:var(--fundo)}
 .ad-img{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--borda);background:#fff}
 .ad-img img{width:100%}
 .ad-legenda{display:grid;gap:8px;margin-top:18px;text-align:center;font-size:.95rem;color:var(--texto-2)}
 
-/* ============ 6. CONSEQUÊNCIAS ============ */
 .cons{background:#fff}
 .cons-lista{display:grid;gap:12px;margin-top:26px}
 @media(min-width:700px){.cons-lista{grid-template-columns:1fr 1fr}}
@@ -161,14 +139,12 @@ p{margin:0}
   padding:24px;text-align:center;font-weight:800;font-size:1.1rem;color:var(--verde-esc)
 }
 
-/* ============ 7. PRODUTO ============ */
 .produto{background:var(--noite);color:#fff}
 .produto h2{color:#fff}
 .produto .lead{color:rgba(255,255,255,.8);margin-top:14px}
 .produto .lead strong{color:var(--amarelo)}
 .prod-grid{display:grid;gap:30px;align-items:center;margin-top:34px}
 @media(min-width:820px){.prod-grid{grid-template-columns:.85fr 1.15fr;gap:44px}}
-
 .mock{max-width:420px;margin:0 auto;width:100%}
 .mock img{border-radius:var(--r-lg);box-shadow:0 26px 54px -18px rgba(0,0,0,.5)}
 .prod-bullets{display:grid;gap:14px}
@@ -176,20 +152,15 @@ p{margin:0}
 .prod-bullets i{flex:none;font-style:normal;width:26px;height:26px;border-radius:9px;background:var(--verde);color:#fff;display:grid;place-items:center;font-size:.78rem;margin-top:2px}
 .prod-bullets b{color:#fff}
 
-/* ============ 8. COMO FUNCIONA (01-04) ============ */
 .como{background:var(--fundo)}
 .cards4{display:grid;gap:14px;margin-top:32px}
 @media(min-width:700px){.cards4{grid-template-columns:1fr 1fr}}
 .card4{background:#fff;border:1px solid var(--borda);border-radius:var(--r-lg);padding:26px 22px;position:relative}
-.card4 .num{
-  font-size:2.4rem;font-weight:800;color:var(--borda);line-height:1;
-  position:absolute;top:18px;right:22px
-}
+.card4 .num{font-size:2.4rem;font-weight:800;color:var(--borda);line-height:1;position:absolute;top:18px;right:22px}
 .card4 h3{margin-bottom:8px;padding-right:52px}
 .card4 p{font-size:.95rem;color:var(--texto-2)}
 .card4 .ic{font-size:1.7rem;margin-bottom:12px}
 
-/* ============ 9. BENEFÍCIOS + RODA ============ */
 .benef{background:#fff}
 .benef-grid{display:grid;gap:32px;margin-top:32px;max-width:640px;margin-left:auto;margin-right:auto}
 .benef-lista{display:grid;gap:14px}
@@ -198,7 +169,6 @@ p{margin:0}
 .benef-item b{display:block;color:var(--noite);font-size:1rem}
 .benef-item span{font-size:.92rem;color:var(--texto-2)}
 
-/* ============ 10. PROVA SOCIAL ============ */
 .prova{background:var(--fundo)}
 .prova .video{margin:30px auto 0}
 .carrossel-dep{margin-top:28px}
@@ -220,7 +190,6 @@ p{margin:0}
 .dep-dot{width:8px;height:8px;border-radius:50%;background:var(--borda);cursor:pointer;border:none;padding:0}
 .dep-dot.on{background:var(--verde)}
 
-/* ============ 11. OBJEÇÕES ============ */
 .obj{background:#fff}
 .obj-lista{display:grid;gap:14px;margin-top:30px;max-width:760px;margin-left:auto;margin-right:auto}
 .obj-item{background:var(--fundo);border:1px solid var(--borda);border-radius:var(--r-lg);padding:22px}
@@ -229,7 +198,6 @@ p{margin:0}
 .obj-item .a{font-size:.97rem;color:var(--texto-2)}
 .obj-item .a strong{color:var(--noite)}
 
-/* ============ 12. OFERTA ============ */
 .oferta{background:var(--noite);color:#fff}
 .oferta h2{color:#fff}
 .caixa{background:#fff;color:var(--texto);border-radius:var(--r-lg);overflow:hidden;margin-top:30px;box-shadow:0 30px 60px -26px rgba(0,0,0,.7)}
@@ -243,7 +211,6 @@ p{margin:0}
 .recebe li{display:flex;gap:12px;align-items:flex-start;font-size:.98rem;line-height:1.5;color:var(--texto)}
 .recebe i{flex:none;font-style:normal;width:24px;height:24px;border-radius:8px;background:var(--verde-cl);color:var(--verde-esc);display:grid;place-items:center;font-size:.78rem;font-weight:800;margin-top:2px}
 .recebe b{color:var(--noite)}
-
 .preco-bloco{margin-top:26px;padding-top:24px;border-top:2px dashed var(--borda);text-align:center}
 .preco-bloco .de{color:var(--texto-2);font-size:.98rem}
 .preco-bloco .de s{color:var(--vermelho)}
@@ -251,28 +218,16 @@ p{margin:0}
 .preco{font-size:clamp(3rem,13vw,4.2rem);font-weight:800;color:var(--verde);line-height:1;letter-spacing:-.03em;margin:2px 0}
 .preco sup{font-size:.34em;vertical-align:.95em;margin-right:3px}
 .parcela{font-weight:700;color:var(--noite);font-size:1rem;margin-bottom:22px}
-.desconto{
-  display:inline-block;background:var(--vermelho);color:#fff;font-weight:800;font-size:.8rem;
-  padding:5px 13px;border-radius:100px;margin-bottom:12px
-}
+.desconto{display:inline-block;background:var(--vermelho);color:#fff;font-weight:800;font-size:.8rem;padding:5px 13px;border-radius:100px;margin-bottom:12px}
 
-/* ============ 13. GARANTIA ============ */
 .gar{background:#fff}
-.gar-caixa{
-  border:2px solid var(--verde);border-radius:var(--r-lg);padding:30px 22px;text-align:center;
-  background:var(--verde-cl)
-}
-.gar-selo{
-  width:112px;height:112px;border-radius:50%;background:var(--verde);color:#fff;display:grid;
-  place-items:center;margin:0 auto 18px;font-weight:800;line-height:1.05;
-  box-shadow:0 0 0 10px rgba(18,161,80,.15)
-}
+.gar-caixa{border:2px solid var(--verde);border-radius:var(--r-lg);padding:30px 22px;text-align:center;background:var(--verde-cl)}
+.gar-selo{width:112px;height:112px;border-radius:50%;background:var(--verde);color:#fff;display:grid;place-items:center;margin:0 auto 18px;font-weight:800;line-height:1.05;box-shadow:0 0 0 10px rgba(18,161,80,.15)}
 .gar-selo .esc{font-size:3rem;line-height:1}
 .gar-caixa h2{margin-bottom:12px}
 .gar-caixa p{color:var(--texto);max-width:62ch;margin:0 auto}
 .gar-caixa .obs{margin-top:14px;font-size:.88rem;color:var(--texto-2);font-weight:700}
 
-/* ============ 14. URGÊNCIA ============ */
 .urg{background:#FFF6ED;border-top:1px solid #F6DFC9;border-bottom:1px solid #F6DFC9}
 .urg h2{color:#9A4A12;margin-bottom:14px}
 .urg p{color:#8A552B;max-width:66ch;margin:0 auto}
@@ -280,7 +235,6 @@ p{margin:0}
 .urg-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
 .urg-tag{background:#fff;border:1px solid #F0D5BC;border-radius:100px;padding:9px 16px;font-size:.85rem;font-weight:700;color:#9A4A12;display:inline-flex;gap:7px;align-items:center}
 
-/* ============ 15. CTA FINAL ============ */
 .final{background:linear-gradient(180deg,#1B2A55,#101A38);color:#fff;text-align:center}
 .final .olho{background:rgba(255,255,255,.12);color:var(--amarelo)}
 .final h2{color:#fff;margin-bottom:14px}
@@ -290,7 +244,6 @@ p{margin:0}
 .final .fechamento s{color:rgba(255,255,255,.5);font-weight:500}
 .final .fechamento b{color:var(--amarelo);font-size:1.5rem}
 
-/* ============ 16. RODAPÉ ============ */
 .rodape{background:#0B1226;color:rgba(255,255,255,.6);padding:44px 0 100px;font-size:.88rem}
 @media(min-width:760px){.rodape{padding-bottom:44px}}
 .rodape h4{color:#fff;font-size:1rem;margin-bottom:10px}
@@ -300,7 +253,8 @@ p{margin:0}
 .rodape a{color:rgba(255,255,255,.8);text-decoration:none}
 .rodape a:hover{text-decoration:underline}
 .rodape details{border-top:1px solid rgba(255,255,255,.12);padding:16px 0}
-.rodape summary{cursor:pointer;font-weight:700;color:rgba(255,255,255,.85);font-size:.92rem}
+.rodape summary{cursor:pointer;font-weight:700;color:rgba(255,255,255,.85);font-size:.92rem;list-style:none}
+.rodape summary::-webkit-details-marker{display:none}
 .rodape details p{margin-top:10px;line-height:1.6}
 .rodape .fim{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;margin-top:10px;line-height:1.6}
 
@@ -308,70 +262,78 @@ p{margin:0}
   body{font-size:16.5px}
   .wrap{padding:0 15px}
   .caixa-corpo{padding:22px 17px}
+  .v-916{max-width:100%}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 
-<!-- ================= 1. BARRA DE PROVA SOCIAL ================= -->
-<!-- [EDITAR: PROVA] use um número verdadeiro. Se ainda não tem base,
-     troque por: "Material digital • Acesso imediato após a compra" -->
+<!-- 1. BARRA DE PROVA SOCIAL -->
 <div class="barra-prova">
-  ⭐<b>+9.000</b> famílias e profissionais já usam o Guia em sua rotina
+  ⭐ <b>+9.000</b> famílias e profissionais já usam o Guia em sua rotina
 </div>
 
-<!-- ================= 2 + 3. HERO COM VSL ================= -->
+<!-- 2 + 3. HERO COM VSL -->
 <section class="hero">
   <div class="wrap">
     <h1>Guia de Atividades com <span class="g">Estímulos Cognitivos e Motores Infantis</span></h1>
 
     <p class="sub">Desenvolvido com base em <strong>neurociência do desenvolvimento e psicologia cerebral infantil</strong>, reúne <strong>+1.080 atividades prontas</strong> que estimulam <strong>memória, atenção, raciocínio, coordenação fina, coordenação ampla e percepção visual</strong> em <strong>10 minutos por dia</strong>, usando só o que você já tem em casa.</p>
 
-    <!-- VSL oculta por enquanto (anúncio vai ao ar sem vídeo). Para reativar quando o vídeo estiver pronto:
-         remova o atributo hidden dos dois blocos abaixo (aviso-video e video v-916) e cole o iframe/video no lugar do .video-vazio -->
-    <div class="aviso-video" hidden><span class="ponto-vivo"></span> Assista antes de continuar</div>
-
-    <div class="video v-916" hidden>
-      <div class="video-vazio">
-        <div>
-          <div class="play">▶</div>
-          <strong>Espaço da VSL</strong>
-          <span>Vídeo vertical 9:16.<br>Substitua este bloco pelo iframe ou vídeo.</span>
-        </div>
-      </div>
+    <!-- ── AVISO DO VÍDEO ── -->
+    <div class="aviso-video">
+      <span class="ponto-vivo"></span> Assista antes de continuar
     </div>
+
+    <!-- ================================================================
+         [EDITAR: VSL] — VÍDEO VIMEO 9:16
+         Troque SEU_ID_VIMEO pelo número do vídeo (ex: 1181423029)
+         Se o vídeo tiver senha/hash, troque SEU_HASH_VIMEO pelo hash
+         (os caracteres após ?h= na URL do Vimeo — ex: c27696bd8c).
+         Se for público e não tiver hash, remova &h=SEU_HASH_VIMEO
+         do src abaixo.
+         ================================================================ -->
+    <div class="video v-916">
+      <iframe
+        src="https://player.vimeo.com/video/1226800937?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        allowfullscreen
+        title="Guia de Atividades — Vídeo de Apresentação">
+      </iframe>
+    </div>
+    <!-- ── fim VSL ── -->
 
     <p class="continue">Continue lendo para entender como funciona</p>
     <span class="seta-baixo">↓</span>
   </div>
 </section>
 
-<!-- ================= 4. PENSAMENTOS / DOR ================= -->
+<!-- 4. PENSAMENTOS / DOR -->
 <section class="sec dor">
   <div class="wrap centro">
     <span class="olho">Você já pensou assim?</span>
-    <h2>“Ele não para quieto cinco minutos… será que eu deveria estar fazendo alguma coisa?”</h2>
+    <h2>"Ele não para quieto cinco minutos… será que eu deveria estar fazendo alguma coisa?"</h2>
 
     <div class="pensamentos">
-      <div class="pensa">“Meu filho troca de brincadeira a cada dois minutos e eu não sei se isso é normal.”</div>
-      <div class="pensa">“Eu sei que devia estimular mais, mas chego em casa exausta e acabo entregando o celular.”</div>
-      <div class="pensa">“A professora comentou que ele tem dificuldade de se concentrar e eu fiquei sem chão.”</div>
-      <div class="pensa">“Comprei brinquedo, comprei apostila, tentei de tudo e nada engata de verdade.”</div>
-      <div class="pensa">“Tenho medo de olhar para trás e perceber que perdi a fase em que dava para ajudar.”</div>
+      <div class="pensa">"Meu filho troca de brincadeira a cada dois minutos e eu não sei se isso é normal."</div>
+      <div class="pensa">"Eu sei que devia estimular mais, mas chego em casa exausta e acabo entregando o celular."</div>
+      <div class="pensa">"A professora comentou que ele tem dificuldade de se concentrar e eu fiquei sem chão."</div>
+      <div class="pensa">"Comprei brinquedo, comprei apostila, tentei de tudo e nada engata de verdade."</div>
+      <div class="pensa">"Tenho medo de olhar para trás e perceber que perdi a fase em que dava para ajudar."</div>
     </div>
 
     <p class="fecha">Se você se reconheceu em pelo menos uma dessas frases, leia com atenção o que vem a seguir.</p>
   </div>
 </section>
 
-<!-- ================= 5. ANTES E DEPOIS ================= -->
+<!-- 5. ANTES E DEPOIS -->
 <section class="sec ad">
   <div class="wrap">
     <div class="ad-img">
-      <img src="https://raw.githubusercontent.com/guiadeatividadesmotoras/kidsofc/main/WhatsApp%20Image%202026-09-10%20at%2013.59.30.jpeg" alt="Hoje: criança disputando atenção com a tela. Com o Guia: dez minutos de atividade certa e criança envolvida">
+      <img src="https://raw.githubusercontent.com/guiadeatividadesmotoras/kidsofc/main/WhatsApp%20Image%202026-09-10%20at%2013.59.30.jpeg" alt="Antes: criança na tela, mãe exausta. Depois: atividade pronta em 10 minutos.">
     </div>
-
     <div class="ad-legenda">
       <span>De um lado: improviso, cansaço e culpa no fim do dia.</span>
       <span>Do outro: uma atividade pronta, no tempo que você tem, com objetivo claro.</span>
@@ -379,7 +341,7 @@ p{margin:0}
   </div>
 </section>
 
-<!-- ================= 6. CONSEQUÊNCIAS ================= -->
+<!-- 6. CONSEQUÊNCIAS -->
 <section class="sec cons">
   <div class="wrap centro">
     <h2>Estímulo é uma janela, e ela não fica aberta para sempre</h2>
@@ -396,7 +358,7 @@ p{margin:0}
   </div>
 </section>
 
-<!-- ================= 7. APRESENTAÇÃO DO PRODUTO ================= -->
+<!-- 7. PRODUTO -->
 <section class="sec produto">
   <div class="wrap centro">
     <span class="olho">A solução</span>
@@ -405,9 +367,8 @@ p{margin:0}
 
     <div class="prod-grid">
       <div class="mock">
-        <img src="https://raw.githubusercontent.com/guiadeatividadesmotoras/kidsofc/main/WhatsApp%20Image%202026-09-10%20at%2014.16.15.jpeg" alt="Guia de Atividades com Estímulos Cognitivos e Motores Infantis, em tablet e cartas">
+        <img src="https://raw.githubusercontent.com/guiadeatividadesmotoras/kidsofc/main/WhatsApp%20Image%202026-09-10%20at%2014.16.15.jpeg" alt="Guia de Atividades em tablet e cartas">
       </div>
-
       <ul class="prod-bullets" style="text-align:left">
         <li><i>✓</i> <span><b>Filtro por idade:</b> 2–3, 4–5, 6–7 e 8–10 anos, sempre no nível certo</span></li>
         <li><i>✓</i> <span><b>Filtro por tempo:</b> 5, 10 ou 15 minutos, conforme o dia permitir</span></li>
@@ -419,13 +380,12 @@ p{margin:0}
     </div>
 
     <a href="#oferta" class="btn btn-l" style="margin-top:34px">QUERO O GUIA AGORA</a>
-
     <p class="continue">Continue lendo para entender melhor</p>
     <span class="seta-baixo">↓</span>
   </div>
 </section>
 
-<!-- ================= 8. COMO FUNCIONA (01–04) ================= -->
+<!-- 8. COMO FUNCIONA -->
 <section class="sec como">
   <div class="wrap centro">
     <span class="olho">Como funciona</span>
@@ -461,7 +421,7 @@ p{margin:0}
   </div>
 </section>
 
-<!-- ================= 9. BENEFÍCIOS + RODA ================= -->
+<!-- 9. BENEFÍCIOS -->
 <section class="sec benef">
   <div class="wrap">
     <div class="centro">
@@ -469,7 +429,6 @@ p{margin:0}
       <h2>O que você tende a perceber nas primeiras semanas</h2>
       <p class="lead" style="margin-top:12px;max-width:60ch;margin-left:auto;margin-right:auto">Os resultados variam de criança para criança, mas estes são os pontos que as famílias mais relatam.</p>
     </div>
-
     <div class="benef-grid">
       <div class="benef-lista">
         <div class="benef-item"><i>✓</i><div><b>Criança mais envolvida</b><span>Termina o que começou sem você precisar ficar em cima o tempo todo</span></div></div>
@@ -482,21 +441,17 @@ p{margin:0}
   </div>
 </section>
 
-<!-- ================= 10. PROVA SOCIAL ================= -->
+<!-- 10. PROVA SOCIAL -->
 <section class="sec prova">
   <div class="wrap centro">
     <span class="olho">Prova social</span>
     <h2>O que as famílias estão contando</h2>
     <p class="lead" style="margin-top:12px">Relatos de quem já colocou o Guia na rotina.</p>
 
-    <!-- Vídeo-prova oculto por enquanto. Para reativar: remova o atributo hidden abaixo e cole o iframe/video -->
+    <!-- Vídeo-prova oculto — remova hidden quando tiver o vídeo -->
     <div class="video v-916" hidden>
-      <div class="video-vazio">
-        <div>
-          <div class="play">▶</div>
-          <strong>Depoimento em vídeo</strong>
-          <span>Vertical 9:16, 30 a 60 segundos.<br>Substitua este bloco pelo iframe ou vídeo.</span>
-        </div>
+      <div style="position:absolute;inset:0;display:grid;place-items:center;background:#000;color:#fff;font-size:.85rem">
+        Slot do vídeo-depoimento — cole o iframe Vimeo aqui
       </div>
     </div>
 
@@ -542,44 +497,42 @@ p{margin:0}
   </div>
 </section>
 
-<!-- ================= 11. OBJEÇÕES ================= -->
+<!-- 11. OBJEÇÕES -->
 <section class="sec obj">
   <div class="wrap centro">
     <span class="olho">Ainda com dúvidas?</span>
     <h2>As quatro perguntas que mais chegam aqui</h2>
-
     <div class="obj-lista" style="text-align:left">
       <div class="obj-item">
-        <div class="q"><em>“</em>Eu não tenho tempo para mais uma coisa na rotina.<em>”</em></div>
+        <div class="q"><em>"</em>Eu não tenho tempo para mais uma coisa na rotina.<em>"</em></div>
         <div class="a">Por isso existe o filtro de tempo. <strong>Cinco minutos é uma opção válida</strong> e já conta. Você aplica enquanto o jantar cozinha, antes do banho ou no caminho de volta da escola.</div>
       </div>
       <div class="obj-item">
-        <div class="q"><em>“</em>Meu filho perde o interesse em tudo muito rápido.<em>”</em></div>
+        <div class="q"><em>"</em>Meu filho perde o interesse em tudo muito rápido.<em>"</em></div>
         <div class="a">Comece pelo nível fácil e pelas atividades de cinco minutos. <strong>Cada atividade tem três níveis</strong>, então você aumenta o desafio conforme ele engata, em vez de trocar de proposta toda hora.</div>
       </div>
       <div class="obj-item">
-        <div class="q"><em>“</em>Já comprei outros materiais e não usei nenhum.<em>”</em></div>
+        <div class="q"><em>"</em>Já comprei outros materiais e não usei nenhum.<em>"</em></div>
         <div class="a">A maioria dos materiais é um PDF gigante que você precisa vasculhar. Aqui é um webapp com <strong>três filtros e resposta em segundos</strong>, o esforço de decidir sai de você.</div>
       </div>
       <div class="obj-item">
-        <div class="q"><em>“</em>Não entendo nada de desenvolvimento infantil.<em>”</em></div>
+        <div class="q"><em>"</em>Não entendo nada de desenvolvimento infantil.<em>"</em></div>
         <div class="a">Não precisa. Cada atividade traz <strong>lista de materiais, passo a passo e o que observar</strong> em linguagem direta. Foi escrito para pai e mãe comuns, não para especialistas.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= 12. OFERTA ================= -->
+<!-- 12. OFERTA -->
 <section class="sec oferta" id="oferta">
   <div class="wrap centro">
     <span class="olho">Oferta especial</span>
     <h2>Acesso completo ao Guia</h2>
-
     <div class="caixa">
       <div class="caixa-topo">ACESSO VITALÍCIO • PAGAMENTO ÚNICO • GARANTIA DE 7 DIAS</div>
       <div class="caixa-corpo" style="text-align:left">
         <div class="oferta-mockup">
-          <img src="https://raw.githubusercontent.com/guiadeatividadesmotoras/kidsofc/main/WhatsApp%20Image%202026-09-10%20at%2014.16.15.jpeg" alt="Guia de Atividades com Estímulos Cognitivos e Motores Infantis, em tablet e cartas">
+          <img src="https://raw.githubusercontent.com/guiadeatividadesmotoras/kidsofc/main/WhatsApp%20Image%202026-09-10%20at%2014.16.15.jpeg" alt="Guia de Atividades em tablet e cartas">
         </div>
         <h3>O que você recebe hoje:</h3>
         <ul class="recebe">
@@ -591,18 +544,13 @@ p{margin:0}
           <li><i>✓</i> <span><b>Bônus: Desafio de 21 dias</b> para transformar os dez minutos diários em hábito</span></li>
           <li><i>✓</i> <span><b>Acesso imediato</b> por WhatsApp e e-mail logo após a confirmação do pagamento</span></li>
         </ul>
-
-        <!-- [EDITAR: PREÇO] 1/3 -->
         <div class="preco-bloco">
           <span class="desconto">54% DE DESCONTO</span>
           <div class="de">De <s>R$ 147,00</s></div>
           <div class="por">por apenas</div>
           <div class="preco"><sup>R$</sup>67</div>
           <div class="parcela">à vista ou parcelado em até 12x no cartão</div>
-
-          <!-- [EDITAR: CHECKOUT] 1/4 -->
           <a href="https://ggcheckout.app/checkout/v5/Iw9tqMlJLT58qgaOycQL" class="btn btn-l">QUERO O GUIA AGORA</a>
-
           <div class="selos">
             <span>🔒 Compra segura</span>
             <span>📱 Acesso pelo celular</span>
@@ -614,7 +562,7 @@ p{margin:0}
   </div>
 </section>
 
-<!-- ================= 13. GARANTIA ================= -->
+<!-- 13. GARANTIA -->
 <section class="sec gar">
   <div class="wrap">
     <div class="gar-caixa">
@@ -626,12 +574,7 @@ p{margin:0}
   </div>
 </section>
 
-<!-- ================= 14. URGÊNCIA ================= -->
-<!-- ====== [EDITAR: PREÇO] 2/3, escreva só o que for verdade ======
-     Se o preço de R$67 for permanente, troque este bloco por uma seção
-     de reforço de valor. Contagem regressiva falsa e "vagas limitadas"
-     inventadas derrubam conta de anúncio e geram reclamação no Procon.
-     ============================================================== -->
+<!-- 14. URGÊNCIA -->
 <section class="sec urg">
   <div class="wrap centro">
     <h2>Esta condição de lançamento é por tempo limitado</h2>
@@ -644,22 +587,17 @@ p{margin:0}
   </div>
 </section>
 
-<!-- ================= 15. CTA FINAL ================= -->
+<!-- 15. CTA FINAL -->
 <section class="sec final">
   <div class="wrap">
     <span class="olho">Você chegou até aqui por um motivo</span>
     <h2>Esta é a hora de começar.</h2>
     <p>Menos do que você gasta em um lanche de fim de semana para ter, todo dia, a atividade certa na mão.</p>
-
     <div class="mock">
-      <img src="https://raw.githubusercontent.com/guiadeatividadesmotoras/kidsofc/main/WhatsApp%20Image%202026-09-10%20at%2014.16.15.jpeg" alt="Guia de Atividades com Estímulos Cognitivos e Motores Infantis, em tablet e cartas">
+      <img src="https://raw.githubusercontent.com/guiadeatividadesmotoras/kidsofc/main/WhatsApp%20Image%202026-09-10%20at%2014.16.15.jpeg" alt="Guia de Atividades em tablet e cartas">
     </div>
-
     <div class="fechamento">De <s>R$ 147,00</s> por apenas <b>R$ 67,00</b></div>
-
-    <!-- [EDITAR: CHECKOUT] 2/4 -->
     <a href="https://ggcheckout.app/checkout/v5/Iw9tqMlJLT58qgaOycQL" class="btn btn-l">QUERO DESENVOLVER O FOCO E A COORDENAÇÃO DO MEU FILHO</a>
-
     <div class="selos" style="color:rgba(255,255,255,.65)">
       <span>Garantia de 7 dias</span>
       <span>Pagamento seguro</span>
@@ -668,37 +606,32 @@ p{margin:0}
   </div>
 </section>
 
-<!-- ================= 16. RODAPÉ ================= -->
+<!-- 16. RODAPÉ -->
 <footer class="rodape">
   <div class="wrap">
     <div class="cols">
       <div>
-        <h4>Guia de Atividades com <span class="realce">Estímulos Cognitivos e Motores Infantis</span></h4>
+        <h4>Guia de Atividades com Estímulos Cognitivos e Motores Infantis</h4>
         <p>Um webapp com +1.080 atividades práticas que estimulam memória, atenção, raciocínio, coordenação e percepção visual em crianças de 2 a 10 anos.</p>
       </div>
       <div>
         <h4>Informações</h4>
         <ul>
           <li><a href="#oferta">Ver a oferta</a></li>
-          <!-- [EDITAR: SUPORTE] -->
           <li><a href="mailto:suporte@guiadeatividades.com.br">suporte@guiadeatividades.com.br</a></li>
         </ul>
       </div>
     </div>
-
     <details>
       <summary>Política de Privacidade</summary>
       <p>Suas informações pessoais são tratadas com confidencialidade e não são compartilhadas com terceiros. Ao realizar a compra, você concorda com o tratamento dos seus dados para fins de entrega do produto digital adquirido, em conformidade com a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).</p>
     </details>
-
     <details>
       <summary>Termos de Uso</summary>
       <p>O produto adquirido é de uso pessoal e intransferível. É proibida a reprodução, distribuição ou comercialização do conteúdo sem autorização expressa. O acesso é disponibilizado após a confirmação do pagamento. A garantia de 7 dias vale a partir da data da compra.</p>
     </details>
-
     <div class="fim">
-      Este produto tem finalidade educacional e recreativa. Não realiza diagnóstico, não promete tratamento e não substitui avaliação ou acompanhamento médico, psicológico, terapêutico ou pedagógico individualizado. Os resultados variam conforme a criança, o contexto familiar e a frequência de uso.
-      <br><br>
+      Este produto tem finalidade educacional e recreativa. Não realiza diagnóstico, não promete tratamento e não substitui avaliação ou acompanhamento médico, psicológico, terapêutico ou pedagógico individualizado. Os resultados variam conforme a criança, o contexto familiar e a frequência de uso.<br><br>
       © 2026 Guia de Atividades com Estímulos Cognitivos e Motores Infantis. Todos os direitos reservados.
     </div>
   </div>
@@ -706,7 +639,6 @@ p{margin:0}
 
 <script>
 (function(){
-  var carrossel=document.querySelector('.carrossel-dep');
   var track=document.getElementById('depTrack');
   var dotsWrap=document.getElementById('depDots');
   if(!track||!dotsWrap) return;
@@ -728,10 +660,7 @@ p{margin:0}
     dots.push(dot);
   }
 
-  function marcaAtivo(idx){
-    atual=idx;
-    dots.forEach(function(d,i){d.classList.toggle('on',i===idx);});
-  }
+  function marcaAtivo(idx){ atual=idx; dots.forEach(function(d,i){d.classList.toggle('on',i===idx);}); }
 
   function ir(idx){
     if(idx<0) idx=itens.length-1;
@@ -740,17 +669,14 @@ p{margin:0}
     marcaAtivo(idx);
   }
 
-  function atualizaPelaRolagem(){
+  track.addEventListener('scroll',function(){
     var maxScroll=track.scrollWidth-track.clientWidth;
     var razao=maxScroll>0?track.scrollLeft/maxScroll:0;
     var idx=Math.round(razao*(itens.length-1));
     if(idx!==atual) marcaAtivo(idx);
-  }
-  track.addEventListener('scroll',atualizaPelaRolagem,{passive:true});
+  },{passive:true});
 
-  function paraAuto(){
-    if(timer){clearInterval(timer);timer=null;}
-  }
+  function paraAuto(){ if(timer){clearInterval(timer);timer=null;} }
   function reiniciaAuto(){
     paraAuto();
     if(!visivel) return;
@@ -760,21 +686,17 @@ p{margin:0}
   document.getElementById('depPrev').addEventListener('click',function(){ ir(atual-1); reiniciaAuto(); });
   document.getElementById('depNext').addEventListener('click',function(){ ir(atual+1); reiniciaAuto(); });
 
+  var carrossel=document.querySelector('.carrossel-dep');
   if(carrossel&&'IntersectionObserver' in window){
     new IntersectionObserver(function(entradas){
       visivel=entradas[0].isIntersecting;
       if(visivel) reiniciaAuto(); else paraAuto();
     },{threshold:.4}).observe(carrossel);
-  } else {
-    visivel=true;
-    reiniciaAuto();
-  }
+  } else { visivel=true; reiniciaAuto(); }
 })();
 </script>
-</body>
-</html>
 
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -782,12 +704,20 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+s.parentNode.insertBefore(t,s)}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1473092987993974');
-fbq('track', 'PageView');
+fbq('init','1473092987993974');
+fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1473092987993974&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+src="https://www.facebook.com/tr?id=1473092987993974&ev=PageView&noscript=1"/></noscript>
+</body>
+</html>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yigf0wdvvc");
+</script>
