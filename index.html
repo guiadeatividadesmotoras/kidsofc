@@ -7,18 +7,24 @@
 <meta name="description" content="1.080 atividades prontas para desenvolver foco, memória e coordenação do seu filho em 10 minutos por dia, com o que já tem em casa.">
 <meta name="theme-color" content="#101A38">
 
-<!-- ================================================================
-     ZONAS EDITÁVEIS
-     [EDITAR: VSL] → substitua SEU_ID_VIMEO e SEU_HASH_VIMEO abaixo
-                     Ex: https://vimeo.com/1181423029?h=c27696bd8c
-                     ID   = 1181423029
-                     hash = c27696bd8c  (parte após ?h= — omita se o
-                            vídeo for público/sem senha)
-     ================================================================ -->
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2521167531628532');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
 
 <style>
 :root{
@@ -172,7 +178,7 @@ p{margin:0}
 .prova{background:var(--fundo)}
 .prova .video{margin:30px auto 0}
 .carrossel-dep{margin-top:28px}
-.dep-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px;scrollbar-width:none;text-align:left}
+.dep-track{position:relative;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px;scrollbar-width:none;text-align:left}
 .dep-track::-webkit-scrollbar{display:none}
 .dep{background:#fff;border:1px solid var(--borda);border-radius:var(--r-lg);padding:22px;display:flex;flex-direction:column;flex:0 0 86%;scroll-snap-align:start}
 @media(min-width:700px){.dep{flex:0 0 calc(50% - 7px)}}
@@ -269,6 +275,11 @@ p{margin:0}
 </head>
 <body>
 
+<!-- Meta Pixel (noscript) -->
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2521167531628532&ev=PageView&noscript=1"
+/></noscript>
+
 <!-- 1. BARRA DE PROVA SOCIAL -->
 <div class="barra-prova">
   ⭐ <b>+9.000</b> famílias e profissionais já usam o Guia em sua rotina
@@ -281,29 +292,21 @@ p{margin:0}
 
     <p class="sub">Desenvolvido com base em <strong>neurociência do desenvolvimento e psicologia cerebral infantil</strong>, reúne <strong>+1.080 atividades prontas</strong> que estimulam <strong>memória, atenção, raciocínio, coordenação fina, coordenação ampla e percepção visual</strong> em <strong>10 minutos por dia</strong>, usando só o que você já tem em casa.</p>
 
-    <!-- ── AVISO DO VÍDEO ── -->
     <div class="aviso-video">
       <span class="ponto-vivo"></span> Assista antes de continuar
     </div>
 
-    <!-- ================================================================
-         [EDITAR: VSL] — VÍDEO VIMEO 9:16
-         Troque SEU_ID_VIMEO pelo número do vídeo (ex: 1181423029)
-         Se o vídeo tiver senha/hash, troque SEU_HASH_VIMEO pelo hash
-         (os caracteres após ?h= na URL do Vimeo — ex: c27696bd8c).
-         Se for público e não tiver hash, remova &h=SEU_HASH_VIMEO
-         do src abaixo.
-         ================================================================ -->
+    <!-- VSL — Vimeo 9:16 -->
     <div class="video v-916">
       <iframe
-        src="https://player.vimeo.com/video/1235823672?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        src="https://player.vimeo.com/video/1235823672?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
         frameborder="0"
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
         allowfullscreen
         title="Guia de Atividades — Vídeo de Apresentação">
       </iframe>
     </div>
-    <!-- ── fim VSL ── -->
+    <!-- fim VSL -->
 
     <p class="continue">Continue lendo para entender como funciona</p>
     <span class="seta-baixo">↓</span>
@@ -555,7 +558,7 @@ p{margin:0}
           <div class="por">por apenas</div>
           <div class="preco"><sup>R$</sup>67,00</div>
           <div class="parcela">à vista ou parcelado em até 12x no cartão</div>
-          <a href="https://ggcheckout.app/checkout/v5/1gP1v7JV8aHvkaal6uuqAR" class="btn btn-l">QUERO O GUIA AGORA</a>
+          <a href="https://ggcheckout.app/checkout/v5/1gP1v7JV8aHvkaal6uuqAR" class="btn btn-l" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">QUERO O GUIA AGORA</a>
           <div class="selos">
             <span>🔒 Compra segura</span>
             <span>📱 Acesso pelo celular</span>
@@ -602,7 +605,7 @@ p{margin:0}
       <img src="https://raw.githubusercontent.com/guiadeatividadesmotoras/kidsofc/main/Guia%20L%C3%BAdico%20de%20Atividades%20Infantis.png" alt="Guia de Atividades em tablet e cartas">
     </div>
     <div class="fechamento">De <s>R$ 147,00</s> por apenas <b>R$67,00</b></div>
-    <a href="https://ggcheckout.app/checkout/v5/1gP1v7JV8aHvkaal6uuqAR" class="btn btn-l">QUERO DESENVOLVER O FOCO E A COORDENAÇÃO DO MEU FILHO</a>
+    <a href="https://ggcheckout.app/checkout/v5/1gP1v7JV8aHvkaal6uuqAR" class="btn btn-l" onclick="if(window.fbq){fbq('track','InitiateCheckout');}">QUERO DESENVOLVER O FOCO E A COORDENAÇÃO DO MEU FILHO</a>
     <div class="selos" style="color:rgba(255,255,255,.65)">
       <span>Garantia de 7 dias</span>
       <span>Pagamento seguro</span>
@@ -701,9 +704,7 @@ p{margin:0}
 })();
 </script>
 
-
-
-
+<!-- Microsoft Clarity -->
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -713,20 +714,3 @@ p{margin:0}
 </script>
 </body>
 </html>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2521167531628532');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2521167531628532&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
